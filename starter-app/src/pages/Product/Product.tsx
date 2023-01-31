@@ -15,6 +15,8 @@ import { Navigate, useParams } from 'react-router-dom';
 import { IProduct } from '../../interfaces/products';
 import { useNavigate } from 'react-router-dom';
 import * as productsApi from '../../api/modules/products';
+import React from 'react';
+import { observer } from 'mobx-react-lite';
 
 const Product: FC<any> = (): ReactElement => {
     const [product, setProduct] = useState<IProduct | null>(null)
@@ -61,7 +63,7 @@ const Product: FC<any> = (): ReactElement => {
                     <Typography noWrap gutterBottom variant="h6" component="div">
                         {product?.name}
                     </Typography>
-                    <Typography variant="body2" color="text.secondary">                        
+                    <Typography variant="body2" color="text.secondary" bgcolor={product?.color}>                        
                        color:  {product?.color}
                        </Typography>
                        <Typography variant="body2" color="text.secondary">
@@ -79,4 +81,4 @@ const Product: FC<any> = (): ReactElement => {
     );
 };
 
-export default Product;
+export default observer(Product);

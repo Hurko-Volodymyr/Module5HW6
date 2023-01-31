@@ -48,7 +48,7 @@ class RegistrationStore {
         }
         this.isLoading = false;
         return `id: ${response.id} token: ${response.token}`;
-    };
+    };    
 };
 
 export default RegistrationStore;

@@ -66,7 +66,7 @@ const Login = () => {
                     )}
                 </Button>
                 {!!appStore.authStore.token && (
-                    <p className="mt-3 mb-3" style={{ color: 'green', fontSize: 14, fontWeight: 700 }}>{`Success! Token is: ${appStore.authStore.token}`}</p>
+                    <p className="mt-3 mb-3" style={{ color: 'green', fontSize: 14, fontWeight: 700 }}>{`Success!`}</p>
                 )}
             </Box>
         </Box>
