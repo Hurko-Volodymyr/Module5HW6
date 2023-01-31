@@ -8,6 +8,9 @@ import Product from "./pages/Product";
 import {FC} from "react";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import CreateUserPage from "./pages/WorkWithUsers/Create/CreateUserPage";
+import CreateUserCard from "./pages/WorkWithUsers/Create/components/CreateUserCard";
+import UpdateUserPage from "./pages/WorkWithUsers/Update/UpdateUserPage";
 
 
 // interface
@@ -35,6 +38,20 @@ export const routes: Array<Route> = [
         component: User,
       },
       {
+        key: 'create-user-page-route',
+        title: 'Create user',
+        path: '/user/create',
+        enabled: true,
+        component: CreateUserPage
+    },
+    {
+        key: 'update-user-page-route',
+        title: 'Update user',
+        path: '/user/update',
+        enabled: true,
+        component: UpdateUserPage
+    },    
+      {
         key: "products-route",
         title: "Products",
         path: "/products",
@@ -44,7 +61,7 @@ export const routes: Array<Route> = [
       {
         key: "product-route",
         title: "Product",
-        path: "/product/:id",
+        path: "/products/:id",
         enabled: false,
         component: Product,
       },

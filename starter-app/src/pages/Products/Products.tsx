@@ -25,7 +25,7 @@ const Products: FC<any> = (): ReactElement => {
                   <>
                       {store.products?.map((item) => (
                           <Grid key={item.id} item lg={2} md={3} xs={6}>
-                              <ProductCard {...item} />
+                              <ProductCard {...item}/>
                           </Grid>
                       ))}
                   </>
@@ -45,6 +45,5 @@ const Products: FC<any> = (): ReactElement => {
       </Box>
   );
 };
-
 
 export default observer(Products);

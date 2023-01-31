@@ -11,14 +11,14 @@ export const getByPage = (page: number) => apiClient({
     method: 'GET'
 });
 
-export const updateUser = ({ id, name, job }: { id: number, name: string, job: string }) => apiClient({
-    path: `users/${id}`,
-    method: 'PUT',
-    data: { id, name, job }
-});
-
 export const createUser = ({ name, job }: { name: string, job: string }) => apiClient({
     path: `users`,
     method: 'POST',
     data: { name, job }
+});
+
+export const updateUser = ({ id, name, job }: { id: string, name: string, job: string }) => apiClient({
+    path: `users/${id}`,
+    method: 'PUT',
+    data: { id, name, job }
 });

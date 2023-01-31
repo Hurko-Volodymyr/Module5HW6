@@ -2,6 +2,7 @@ import {Card, CardActionArea, CardContent, CardMedia, Typography} from "@mui/mat
 import {FC, ReactElement} from "react";
 import {IProduct} from "../../../interfaces/products";
 import {useNavigate} from "react-router-dom";
+import React from "react";
 
 const ProductCard: FC<IProduct> = (props): ReactElement => {
 
